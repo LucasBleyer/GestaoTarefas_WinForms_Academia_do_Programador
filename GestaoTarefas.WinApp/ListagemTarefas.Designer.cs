@@ -54,6 +54,7 @@
             this.bt_editar.TabIndex = 1;
             this.bt_editar.Text = "Editar";
             this.bt_editar.UseVisualStyleBackColor = true;
+            this.bt_editar.Click += new System.EventHandler(this.bt_editar_Click);
             // 
             // bt_excluir
             // 
@@ -63,6 +64,7 @@
             this.bt_excluir.TabIndex = 2;
             this.bt_excluir.Text = "Excluir";
             this.bt_excluir.UseVisualStyleBackColor = true;
+            this.bt_excluir.Click += new System.EventHandler(this.bt_excluir_Click);
             // 
             // bt_cadastrar
             // 

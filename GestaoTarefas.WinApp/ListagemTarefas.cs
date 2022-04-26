@@ -44,5 +44,49 @@ namespace GestaoTarefas.WinApp
                 CarregarTarefas();
             }
         }
+
+        private void bt_editar_Click(object sender, EventArgs e)
+        {
+            Tarefa tarefaSelecionada = (Tarefa)listTarefas.SelectedItem;
+
+            if(tarefaSelecionada == null)
+            {
+                MessageBox.Show("Selecione uma tarefa primeiro", "Edição de Tarefas",
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            CadastroTarefas tela = new CadastroTarefas();
+            tela.Tarefa = tarefaSelecionada;
+
+            DialogResult resultado = tela.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                repositorioTarefa.Editar(tela.Tarefa);
+                CarregarTarefas();
+            }
+        }
+
+        private void bt_excluir_Click(object sender, EventArgs e)
+        {
+            Tarefa tarefaSelecionada = (Tarefa)listTarefas.SelectedItem;
+
+            if (tarefaSelecionada == null)
+            {
+                MessageBox.Show("Selecione uma tarefa primeiro", "Edição de Tarefas",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            DialogResult resultado = MessageBox.Show("Deseja realmente excluir a tarefa?",
+                "Exclusão de Tarefas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.OK)
+            {
+                repositorioTarefa.Excluir(tarefaSelecionada);
+                CarregarTarefas();
+            }
+        }
     }
 }
