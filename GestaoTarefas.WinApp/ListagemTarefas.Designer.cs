@@ -40,7 +40,7 @@
             // 
             this.bt_inserir.Location = new System.Drawing.Point(12, 12);
             this.bt_inserir.Name = "bt_inserir";
-            this.bt_inserir.Size = new System.Drawing.Size(75, 23);
+            this.bt_inserir.Size = new System.Drawing.Size(75, 40);
             this.bt_inserir.TabIndex = 0;
             this.bt_inserir.Text = "Inserir";
             this.bt_inserir.UseVisualStyleBackColor = true;
@@ -50,7 +50,7 @@
             // 
             this.bt_editar.Location = new System.Drawing.Point(93, 12);
             this.bt_editar.Name = "bt_editar";
-            this.bt_editar.Size = new System.Drawing.Size(75, 23);
+            this.bt_editar.Size = new System.Drawing.Size(75, 40);
             this.bt_editar.TabIndex = 1;
             this.bt_editar.Text = "Editar";
             this.bt_editar.UseVisualStyleBackColor = true;
@@ -60,7 +60,7 @@
             // 
             this.bt_excluir.Location = new System.Drawing.Point(174, 12);
             this.bt_excluir.Name = "bt_excluir";
-            this.bt_excluir.Size = new System.Drawing.Size(75, 23);
+            this.bt_excluir.Size = new System.Drawing.Size(75, 40);
             this.bt_excluir.TabIndex = 2;
             this.bt_excluir.Text = "Excluir";
             this.bt_excluir.UseVisualStyleBackColor = true;
@@ -70,16 +70,16 @@
             // 
             this.bt_cadastrar.Location = new System.Drawing.Point(255, 12);
             this.bt_cadastrar.Name = "bt_cadastrar";
-            this.bt_cadastrar.Size = new System.Drawing.Size(111, 23);
+            this.bt_cadastrar.Size = new System.Drawing.Size(99, 40);
             this.bt_cadastrar.TabIndex = 3;
             this.bt_cadastrar.Text = "Cadastrar Itens";
             this.bt_cadastrar.UseVisualStyleBackColor = true;
             // 
             // bt_atualizar
             // 
-            this.bt_atualizar.Location = new System.Drawing.Point(372, 12);
+            this.bt_atualizar.Location = new System.Drawing.Point(360, 12);
             this.bt_atualizar.Name = "bt_atualizar";
-            this.bt_atualizar.Size = new System.Drawing.Size(95, 23);
+            this.bt_atualizar.Size = new System.Drawing.Size(95, 40);
             this.bt_atualizar.TabIndex = 4;
             this.bt_atualizar.Text = "Atualizar Itens";
             this.bt_atualizar.UseVisualStyleBackColor = true;
@@ -88,25 +88,26 @@
             // 
             this.listTarefas.FormattingEnabled = true;
             this.listTarefas.ItemHeight = 15;
-            this.listTarefas.Location = new System.Drawing.Point(12, 41);
+            this.listTarefas.Location = new System.Drawing.Point(12, 71);
             this.listTarefas.Name = "listTarefas";
-            this.listTarefas.Size = new System.Drawing.Size(455, 244);
+            this.listTarefas.Size = new System.Drawing.Size(443, 214);
             this.listTarefas.TabIndex = 5;
             // 
             // ListagemTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 307);
+            this.ClientSize = new System.Drawing.Size(467, 307);
             this.Controls.Add(this.listTarefas);
             this.Controls.Add(this.bt_atualizar);
             this.Controls.Add(this.bt_cadastrar);
             this.Controls.Add(this.bt_excluir);
             this.Controls.Add(this.bt_editar);
             this.Controls.Add(this.bt_inserir);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "ListagemTarefas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Gestão de Tarefas";
             this.ResumeLayout(false);
 
         }

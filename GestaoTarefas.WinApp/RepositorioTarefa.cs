@@ -9,7 +9,7 @@ namespace GestaoTarefas.WinApp
     public class RepositorioTarefa
     {
         List<Tarefa> tarefas = new List<Tarefa>();
-        private int cont = 0;
+        private int contador = 0;
 
         public List<Tarefa> SelecionarTodos()
         {
@@ -18,7 +18,7 @@ namespace GestaoTarefas.WinApp
 
         public void Inserir(Tarefa novaTarefa)
         {
-            novaTarefa.numero = cont++;
+            novaTarefa.Numero = ++contador;
             tarefas.Add(novaTarefa);
         }
     }
