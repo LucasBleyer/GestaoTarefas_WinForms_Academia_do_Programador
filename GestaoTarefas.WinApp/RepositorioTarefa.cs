@@ -22,7 +22,7 @@ namespace GestaoTarefas.WinApp
             tarefas.Add(novaTarefa);
         }
 
-        internal void Editar(Tarefa tarefa)
+        public void Editar(Tarefa tarefa)
         {
             foreach (var item in tarefas)
             {
@@ -32,6 +32,10 @@ namespace GestaoTarefas.WinApp
                     break;
                 }
             }
+        }
+        public void Excluir(Tarefa tarefa)
+        {
+            tarefas.Remove(tarefa);
         }
     }
 }

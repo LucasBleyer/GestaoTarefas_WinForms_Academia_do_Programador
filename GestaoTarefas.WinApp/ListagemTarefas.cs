@@ -43,9 +43,7 @@ namespace GestaoTarefas.WinApp
         private void bt_editar_Click(object sender, EventArgs e)
         {
             Tarefa tarefaSelecinada = (Tarefa)listTarefas.SelectedItem;//selecionar a tarefa na lista
-
-            CadastroTarefas tela = new CadastroTarefas();
-
+            CadastroTarefas tela = new CadastroTarefas();  
             tela.Tarefa = tarefaSelecinada;
 
             DialogResult resultado = tela.ShowDialog();
@@ -60,6 +58,23 @@ namespace GestaoTarefas.WinApp
         private void bt_excluir_Click(object sender, EventArgs e)
         {
             Tarefa tarefaSelecionada = (Tarefa)listTarefas.SelectedItem;//selecionar a tarefa na lista
+
+            if (tarefaSelecionada == null)
+            {
+                MessageBox.Show("Não existe nenhuma tarefa selecionada!",
+                "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                DialogResult resultado = MessageBox.Show("Deseja realmente excluir esta tarefa?",
+                "Exclusão de Tarefas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.OK)
+                {
+                    repositorioTarefa.Excluir(tarefaSelecionada);
+                    CarregarTarefas();
+                }
+            }
         }
     }
 }

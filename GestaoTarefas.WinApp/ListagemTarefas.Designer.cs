@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 350);
+            this.ClientSize = new System.Drawing.Size(586, 350);
             this.Controls.Add(this.listTarefas);
             this.Controls.Add(this.bt_atualizar);
             this.Controls.Add(this.bt_cadastrar);
