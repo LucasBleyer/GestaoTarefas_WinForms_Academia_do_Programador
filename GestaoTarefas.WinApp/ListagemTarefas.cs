@@ -76,5 +76,26 @@ namespace GestaoTarefas.WinApp
                 }
             }
         }
+
+        private void bt_cadastrar_Click(object sender, EventArgs e)
+        {
+            Tarefa tarefaSelecionada = (Tarefa)listTarefas.SelectedItem;//selecionar a tarefa na lista
+
+            if (tarefaSelecionada == null)
+            {
+                MessageBox.Show("Não existe nenhuma tarefa selecionada!",
+                "Edição de Tarefas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            CadastroItemsTarefa tela = new CadastroItemsTarefa(tarefaSelecionada);
+
+            if (tela.ShowDialog() == DialogResult.OK)
+            {
+                List<ItemTarefa> items = tela.ItemsAdicionados;//propriedade do cadastro items tarefa
+
+                repositorioTarefa.AdicionarItens(tarefaSelecionada, items);
+
+                CarregarTarefas();
+            }
+        }
     }
 }

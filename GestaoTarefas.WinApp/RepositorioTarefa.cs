@@ -37,5 +37,13 @@ namespace GestaoTarefas.WinApp
         {
             tarefas.Remove(tarefa);
         }
+
+        internal void AdicionarItens(Tarefa tarefaSelecionada, List<ItemTarefa> items)
+        {
+            foreach (var item in items)
+            {
+                tarefaSelecionada.AdicionarItem(item);
+            }
+        }
     }
 }
