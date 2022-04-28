@@ -19,67 +19,47 @@ namespace GestaoTarefas.WinApp
         {
             List<Tarefa> tarefas = repositorioTarefa.SelecionarTodos();
 
-            foreach(Tarefa t in tarefas)
+            listTarefas.Items.Clear();
+            foreach (Tarefa tarefa in tarefas)
             {
-                listTarefas.Items.Add(t);
+                listTarefas.Items.Add(tarefa);
             } 
         }
 
         private void bt_inserir_Click(object sender, EventArgs e)
         {
             CadastroTarefas tela = new CadastroTarefas();
+            tela.Tarefa = new Tarefa();
 
             DialogResult resultado = tela.ShowDialog();
 
             if (resultado == DialogResult.OK)
             {
-                repositorioTarefa.Inserir(tela.NovaTarefa);
+                repositorioTarefa.Inserir(tela.Tarefa);
                 CarregarTarefas();
             }
         }
 
         private void bt_editar_Click(object sender, EventArgs e)
         {
-            //Tarefa tarefaSelecionada = (Tarefa)listTarefas.SelectedItem;
+            Tarefa tarefaSelecinada = (Tarefa)listTarefas.SelectedItem;//selecionar a tarefa na lista
 
-            //if (tarefaSelecionada == null)
-            //{
-            //    MessageBox.Show("Selecione uma tarefa primeiro", "Edição de Tarefas",
-            //                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //}
+            CadastroTarefas tela = new CadastroTarefas();
 
-            //CadastroTarefas tela = new CadastroTarefas();
-            //tela.Tarefa = tarefaSelecionada;
+            tela.Tarefa = tarefaSelecinada;
 
-            //DialogResult resultado = tela.ShowDialog();
+            DialogResult resultado = tela.ShowDialog();
 
-            //if (resultado == DialogResult.OK)
-            //{
-            //    repositorioTarefa.Editar(tela.Tarefa);
-            //    CarregarTarefas();
-            //}
+            if (resultado == DialogResult.OK)
+            {
+                repositorioTarefa.Editar(tela.Tarefa);
+                CarregarTarefas();
+            }
         }
 
         private void bt_excluir_Click(object sender, EventArgs e)
         {
-            //Tarefa tarefaSelecionada = (Tarefa)listTarefas.SelectedItem;
-
-            //if (tarefaSelecionada == null)
-            //{
-            //    MessageBox.Show("Selecione uma tarefa primeiro", "Edição de Tarefas",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //}
-
-            //DialogResult resultado = MessageBox.Show("Deseja realmente excluir a tarefa?",
-            //    "Exclusão de Tarefas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-            //if (resultado == DialogResult.OK)
-            //{
-            //    repositorioTarefa.Excluir(tarefaSelecionada);
-            //    CarregarTarefas();
-            //}
+            Tarefa tarefaSelecionada = (Tarefa)listTarefas.SelectedItem;//selecionar a tarefa na lista
         }
     }
 }

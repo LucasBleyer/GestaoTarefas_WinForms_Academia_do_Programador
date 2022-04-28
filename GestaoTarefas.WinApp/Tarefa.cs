@@ -10,20 +10,22 @@ namespace GestaoTarefas.WinApp
     {
         public int Numero { get; set; }
         public string Titulo { get; set; }
+        public DateTime DataCriacao { get; set; }
 
-        public Tarefa(int numero, string titulo)
+        public Tarefa(int numero, string titulo) :this()
         {
-            this.Numero = numero;
-            this.Titulo = titulo;
+            Numero = numero;
+            Titulo = titulo;
         }
+
         public Tarefa()
         {
-
+            DataCriacao = DateTime.Now;
         }
 
         public override string ToString()
         {
-            return $"Número: {Numero}, Título: {Titulo}";//interpolar string
+            return $"Número: {Numero} , Título: {Titulo} , Data de Criação: {DataCriacao}";//interpolar string
         }
     }
 }

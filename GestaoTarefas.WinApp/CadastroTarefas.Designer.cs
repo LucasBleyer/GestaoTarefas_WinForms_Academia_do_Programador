@@ -33,12 +33,15 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.bt_gravar = new System.Windows.Forms.Button();
             this.bt_cancelar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label1.Location = new System.Drawing.Point(26, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 21);
@@ -48,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 73);
+            this.label2.Location = new System.Drawing.Point(26, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 15);
             this.label2.TabIndex = 1;
@@ -56,7 +59,7 @@
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(72, 73);
+            this.txtTitulo.Location = new System.Drawing.Point(72, 97);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(323, 23);
             this.txtTitulo.TabIndex = 3;
@@ -82,11 +85,30 @@
             this.bt_cancelar.Text = "Cancelar";
             this.bt_cancelar.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Número:";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Enabled = false;
+            this.txtNumero.Location = new System.Drawing.Point(72, 62);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(40, 23);
+            this.txtNumero.TabIndex = 7;
+            // 
             // CadastroTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(408, 195);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.bt_cancelar);
             this.Controls.Add(this.bt_gravar);
             this.Controls.Add(this.txtTitulo);
@@ -112,5 +134,7 @@
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Button bt_gravar;
         private System.Windows.Forms.Button bt_cancelar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNumero;
     }
 }

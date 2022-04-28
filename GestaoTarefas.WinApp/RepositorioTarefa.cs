@@ -21,5 +21,17 @@ namespace GestaoTarefas.WinApp
             novaTarefa.Numero = ++contador;
             tarefas.Add(novaTarefa);
         }
+
+        internal void Editar(Tarefa tarefa)
+        {
+            foreach (var item in tarefas)
+            {
+                if (item.Numero == tarefa.Numero)
+                {
+                    item.Titulo = tarefa.Titulo;
+                    break;
+                }
+            }
+        }
     }
 }

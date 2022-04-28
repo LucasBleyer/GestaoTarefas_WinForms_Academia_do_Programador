@@ -12,31 +12,30 @@ namespace GestaoTarefas.WinApp
 {
     public partial class CadastroTarefas : Form
     {
-        private Tarefa novaTarefa;
+        private Tarefa tarefa;
 
         public CadastroTarefas()
         {
             InitializeComponent();
         }
 
-        public Tarefa NovaTarefa
+        public Tarefa Tarefa
         {
-            get 
-            { 
-                return novaTarefa;
+            get
+            {
+                return tarefa;
             }
             set
             {
-                novaTarefa = value;
-                txtTitulo.Text = novaTarefa.Titulo;
+                tarefa = value;
+                txtNumero.Text = tarefa.Numero.ToString();
+                txtTitulo.Text = tarefa.Titulo;
             }
         }
 
         private void bt_gravar_Click(object sender, EventArgs e)
         {
-            novaTarefa = new Tarefa();
-
-            novaTarefa.Titulo = txtTitulo.Text;
+            tarefa.Titulo = txtTitulo.Text;
         }
     }
 }

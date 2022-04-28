@@ -38,7 +38,7 @@
             // 
             // bt_inserir
             // 
-            this.bt_inserir.Location = new System.Drawing.Point(12, 12);
+            this.bt_inserir.Location = new System.Drawing.Point(12, 23);
             this.bt_inserir.Name = "bt_inserir";
             this.bt_inserir.Size = new System.Drawing.Size(75, 40);
             this.bt_inserir.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // bt_editar
             // 
-            this.bt_editar.Location = new System.Drawing.Point(93, 12);
+            this.bt_editar.Location = new System.Drawing.Point(124, 23);
             this.bt_editar.Name = "bt_editar";
             this.bt_editar.Size = new System.Drawing.Size(75, 40);
             this.bt_editar.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // bt_excluir
             // 
-            this.bt_excluir.Location = new System.Drawing.Point(174, 12);
+            this.bt_excluir.Location = new System.Drawing.Point(234, 23);
             this.bt_excluir.Name = "bt_excluir";
             this.bt_excluir.Size = new System.Drawing.Size(75, 40);
             this.bt_excluir.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // bt_cadastrar
             // 
-            this.bt_cadastrar.Location = new System.Drawing.Point(255, 12);
+            this.bt_cadastrar.Location = new System.Drawing.Point(345, 23);
             this.bt_cadastrar.Name = "bt_cadastrar";
             this.bt_cadastrar.Size = new System.Drawing.Size(99, 40);
             this.bt_cadastrar.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             // bt_atualizar
             // 
-            this.bt_atualizar.Location = new System.Drawing.Point(360, 12);
+            this.bt_atualizar.Location = new System.Drawing.Point(477, 23);
             this.bt_atualizar.Name = "bt_atualizar";
             this.bt_atualizar.Size = new System.Drawing.Size(95, 40);
             this.bt_atualizar.TabIndex = 4;
@@ -88,16 +88,16 @@
             // 
             this.listTarefas.FormattingEnabled = true;
             this.listTarefas.ItemHeight = 15;
-            this.listTarefas.Location = new System.Drawing.Point(12, 71);
+            this.listTarefas.Location = new System.Drawing.Point(12, 83);
             this.listTarefas.Name = "listTarefas";
-            this.listTarefas.Size = new System.Drawing.Size(443, 214);
+            this.listTarefas.Size = new System.Drawing.Size(560, 244);
             this.listTarefas.TabIndex = 5;
             // 
             // ListagemTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 307);
+            this.ClientSize = new System.Drawing.Size(584, 350);
             this.Controls.Add(this.listTarefas);
             this.Controls.Add(this.bt_atualizar);
             this.Controls.Add(this.bt_cadastrar);
