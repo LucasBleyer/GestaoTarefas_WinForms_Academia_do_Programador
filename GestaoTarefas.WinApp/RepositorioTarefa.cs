@@ -38,7 +38,7 @@ namespace GestaoTarefas.WinApp
             tarefas.Remove(tarefa);
         }
 
-        internal void AdicionarItens(Tarefa tarefaSelecionada, List<ItemTarefa> items)
+        public void AdicionarItens(Tarefa tarefaSelecionada, List<ItemTarefa> items)
         {
             foreach (var item in items)
             {
@@ -46,7 +46,7 @@ namespace GestaoTarefas.WinApp
             }
         }
 
-        internal void AtualizarItems(Tarefa tarefaSelecionada, List<ItemTarefa> itemsConcluidos)
+        public void AtualizarItems(Tarefa tarefaSelecionada, List<ItemTarefa> itemsConcluidos)
         {
             foreach (var item in itemsConcluidos)
             {
