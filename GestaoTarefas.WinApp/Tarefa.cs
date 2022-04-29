@@ -26,15 +26,12 @@ namespace GestaoTarefas.WinApp
             return $"Número: {Numero} , Título: {Titulo} , Data de Criação: {DataCriacao}";//interpolar string
         }
 
-        internal void AdicionarItem(ItemTarefa item)
+        public void AdicionarItem(ItemTarefa item)
         {
             //verificar se o item ja foi adicionado ou nao
-            if (items.Exists(x => x.Equals(item) == false)){
+            if (items.Exists(x => x.Equals(item)) == false){
                 items.Add(item);
             }
-            
-                
-            
         }
     }
 }

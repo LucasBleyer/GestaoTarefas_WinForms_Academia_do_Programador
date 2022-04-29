@@ -72,7 +72,7 @@ namespace GestaoTarefas.WinApp
             if (tarefaSelecionada == null)
             {
                 MessageBox.Show("Não existe nenhuma tarefa selecionada!",
-                "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                "Exclusão de Tarefas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -94,7 +94,7 @@ namespace GestaoTarefas.WinApp
             if (tarefaSelecionada == null)
             {
                 MessageBox.Show("Não existe nenhuma tarefa selecionada!",
-                "Edição de Tarefas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                "Cadastro de Items", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 

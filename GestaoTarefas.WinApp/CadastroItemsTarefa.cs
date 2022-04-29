@@ -15,9 +15,9 @@ namespace GestaoTarefas.WinApp
             this.tarefa = tarefa;
             lb_tituloTarefa.Text = tarefa.Titulo;
 
-            foreach (ItemTarefa items in tarefa.Items)
+            foreach (var item in tarefa.Items)
             {
-                listItemsTarefas.Items.Add(items);
+                listItemsTarefas.Items.Add(item);
             }
 
         }
@@ -31,7 +31,7 @@ namespace GestaoTarefas.WinApp
         }
         private void bt_adicionar_Click(object sender, EventArgs e)
         {
-            List<string> titulos = ItemsAdicionados.Select(a => a.Titulo).ToList();
+            List<string> titulos = ItemsAdicionados.Select(t => t.Titulo).ToList();
 
             if (titulos.Count == 0 || titulos.Contains(txtTituloItem.Text) == false)
             {
