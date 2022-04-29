@@ -130,8 +130,10 @@ namespace GestaoTarefas.WinApp
                 {
                     List<ItemTarefa> items = tela.ItemsConcluidos;//propriedade do cadastro items tarefa
 
-                    repositorioTarefa.AtualizarItems(items);
+                    repositorioTarefa.AtualizarItems(tarefaSelecionada, items);
                 }
+
+                CarregarTarefas();
             }
                    
 

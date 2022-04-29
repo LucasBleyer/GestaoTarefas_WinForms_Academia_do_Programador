@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GestaoTarefas.WinApp
 {
@@ -23,7 +24,8 @@ namespace GestaoTarefas.WinApp
 
         public override string ToString()
         {
-            return $"Número: {Numero} , Título: {Titulo} , Data de Criação: {DataCriacao}";//interpolar string
+            var percentual = calcularPercentualConcluido();
+            return $"Número: {Numero} , Título: {Titulo} , Data de Criação: {DataCriacao}, Percentual: {percentual}%";//interpolar string
         }
 
         public void AdicionarItem(ItemTarefa item)
@@ -38,6 +40,19 @@ namespace GestaoTarefas.WinApp
         {
             ItemTarefa itemTarefa = items.Find(x => x.Equals(item));
             itemTarefa.Concluir();
+        }
+
+        public decimal calcularPercentualConcluido()
+        {
+            if (items.Count == 0)
+            {
+                return 0;
+            }
+
+            int quant_concluidas = items.Count(x => x.Concluido);
+            var percentual = (quant_concluidas / (decimal)items.Count()) * 100;
+
+            return Math.Round(percentual, 2);
         }
     }
 }

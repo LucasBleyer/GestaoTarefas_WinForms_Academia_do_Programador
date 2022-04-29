@@ -22,6 +22,13 @@ namespace GestaoTarefas.WinApp
             foreach (var item in tarefa.Items)
             {
                 listItemsTarefa.Items.Add(item);
+
+                int i = 0;
+                if (item.Concluido)
+                {
+                    listItemsTarefa.SetItemChecked(i, true);
+                    i++;
+                }
             }
         }
 
