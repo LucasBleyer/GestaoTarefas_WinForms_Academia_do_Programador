@@ -105,10 +105,11 @@
             // lb_tituloTarefa
             // 
             this.lb_tituloTarefa.AutoSize = true;
-            this.lb_tituloTarefa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_tituloTarefa.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_tituloTarefa.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lb_tituloTarefa.Location = new System.Drawing.Point(61, 19);
             this.lb_tituloTarefa.Name = "lb_tituloTarefa";
-            this.lb_tituloTarefa.Size = new System.Drawing.Size(85, 15);
+            this.lb_tituloTarefa.Size = new System.Drawing.Size(96, 15);
             this.lb_tituloTarefa.TabIndex = 13;
             this.lb_tituloTarefa.Text = "[Título Tarefa]";
             // 
