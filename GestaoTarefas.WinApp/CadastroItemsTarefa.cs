@@ -8,16 +8,18 @@ namespace GestaoTarefas.WinApp
 {
     public partial class CadastroItemsTarefa : Form
     {
+        private readonly Tarefa tarefa;
         public CadastroItemsTarefa(Tarefa tarefa)
         {
             InitializeComponent();
-
+            this.tarefa = tarefa;
             lb_tituloTarefa.Text = tarefa.Titulo;
 
             foreach (ItemTarefa items in tarefa.Items)
             {
                 listItemsTarefas.Items.Add(items);
             }
+
         }
         public List<ItemTarefa> ItemsAdicionados //propriedade
         {
@@ -27,14 +29,18 @@ namespace GestaoTarefas.WinApp
                 //retorna uma lista de objetos fazendo cast em cada elemento da lista
             }
         }
-
         private void bt_adicionar_Click(object sender, EventArgs e)
         {
-            ItemTarefa itemTarefa = new ItemTarefa();
+            List<string> titulos = ItemsAdicionados.Select(a => a.Titulo).ToList();
 
-            itemTarefa.Titulo = txtTituloItem.Text;
+            if (titulos.Count == 0 || titulos.Contains(txtTituloItem.Text) == false)
+            {
+                ItemTarefa itemTarefa = new ItemTarefa();
 
-            listItemsTarefas.Items.Add(itemTarefa);
+                itemTarefa.Titulo = txtTituloItem.Text;
+
+                listItemsTarefas.Items.Add(itemTarefa);
+            }
         }
     }
 }
