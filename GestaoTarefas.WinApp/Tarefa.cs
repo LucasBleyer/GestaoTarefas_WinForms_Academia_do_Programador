@@ -33,5 +33,11 @@ namespace GestaoTarefas.WinApp
                 items.Add(item);
             }
         }
+
+        public void ConcluirItem(ItemTarefa item)
+        {
+            ItemTarefa itemTarefa = items.Find(x => x.Equals(item));
+            itemTarefa.Concluir();
+        }
     }
 }

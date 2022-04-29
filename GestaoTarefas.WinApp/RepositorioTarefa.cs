@@ -45,5 +45,13 @@ namespace GestaoTarefas.WinApp
                 tarefaSelecionada.AdicionarItem(item);
             }
         }
+
+        internal void AtualizarItems(Tarefa tarefaSelecionada, List<ItemTarefa> itemsConcluidos)
+        {
+            foreach (var item in itemsConcluidos)
+            {
+                tarefaSelecionada.ConcluirItem(item);
+            }
+        }
     }
 }
