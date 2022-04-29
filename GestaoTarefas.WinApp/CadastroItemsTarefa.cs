@@ -33,6 +33,7 @@ namespace GestaoTarefas.WinApp
         {
             List<string> titulos = ItemsAdicionados.Select(t => t.Titulo).ToList();
 
+            //se o item ainda não está na lista de item(Contains == False) adiciona o item
             if (titulos.Count == 0 || titulos.Contains(txtTituloItem.Text) == false)
             {
                 ItemTarefa itemTarefa = new ItemTarefa();
