@@ -42,16 +42,26 @@ namespace GestaoTarefas.WinApp
 
         private void bt_editar_Click(object sender, EventArgs e)
         {
-            Tarefa tarefaSelecinada = (Tarefa)listTarefas.SelectedItem;//selecionar a tarefa na lista
-            CadastroTarefas tela = new CadastroTarefas();  
-            tela.Tarefa = tarefaSelecinada;
+            Tarefa tarefaSelecionada = (Tarefa)listTarefas.SelectedItem;//selecionar a tarefa na lista
 
-            DialogResult resultado = tela.ShowDialog();
-
-            if (resultado == DialogResult.OK)
+            if (tarefaSelecionada == null)
             {
-                repositorioTarefa.Editar(tela.Tarefa);
-                CarregarTarefas();
+                MessageBox.Show("Selecione uma tarefa primeiro",
+                "Edição de Tarefas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+            {
+                CadastroTarefas tela = new CadastroTarefas();
+                tela.Tarefa = tarefaSelecionada;
+
+                DialogResult resultado = tela.ShowDialog();
+
+                if (resultado == DialogResult.OK)
+                {
+                    repositorioTarefa.Editar(tela.Tarefa);
+                    CarregarTarefas();
+                }
             }
         }
 
@@ -85,7 +95,9 @@ namespace GestaoTarefas.WinApp
             {
                 MessageBox.Show("Não existe nenhuma tarefa selecionada!",
                 "Edição de Tarefas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
+
             CadastroItemsTarefa tela = new CadastroItemsTarefa(tarefaSelecionada);
 
             if (tela.ShowDialog() == DialogResult.OK)

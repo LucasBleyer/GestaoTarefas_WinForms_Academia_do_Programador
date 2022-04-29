@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GestaoTarefas.WinApp
@@ -35,6 +28,8 @@ namespace GestaoTarefas.WinApp
 
         private void bt_gravar_Click(object sender, EventArgs e)
         {
+            tarefa = new Tarefa();
+
             tarefa.Titulo = txtTitulo.Text;
         }
     }
