@@ -39,7 +39,11 @@ namespace GestaoTarefas.WinApp
         public void ConcluirItem(ItemTarefa item)
         {
             ItemTarefa itemTarefa = items.Find(x => x.Equals(item));
-            itemTarefa.Concluir();
+            
+            if (itemTarefa != null)
+            {
+                itemTarefa.Concluir();
+            }
         }
 
         public decimal calcularPercentualConcluido()

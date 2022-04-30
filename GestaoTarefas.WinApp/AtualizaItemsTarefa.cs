@@ -19,16 +19,19 @@ namespace GestaoTarefas.WinApp
             this.tarefa = tarefa;
             lb_tituloTarefa.Text = tarefa.Titulo;
 
+            CarregarItemsTarefa(tarefa);
+        }
+        private void CarregarItemsTarefa(Tarefa tarefa)
+        {
+            int i = 0;
             foreach (var item in tarefa.Items)
             {
                 listItemsTarefa.Items.Add(item);
 
-                int i = 0;
                 if (item.Concluido)
-                {
                     listItemsTarefa.SetItemChecked(i, true);
-                    i++;
-                }
+
+                i++;
             }
         }
 
